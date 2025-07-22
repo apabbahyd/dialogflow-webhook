@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 const SUPABASE_URL = "https://lvgrbxlopeaaqyehguuv.supabase.co"; // replace this
-const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx2Z3JieGxvcGVhYXF5ZWhndXV2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIxMzYyMjAsImV4cCI6MjA2NzcxMjIyMH0.eKHPhT2wu0DtnBKmBo7wMxWDoEiIzmLzpXC9GfTGwFM"; // replace this
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx2Z3JieGxvcGVhYXF5ZWhndXV2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MjEzNjIyMCwiZXhwIjoyMDY3NzEyMjIwfQ.Nv6CzsZWv0PLx6xjzosZwgr4ZbAQqFh4CdVKTrFE48E";
 
 app.post("/", async (req, res) => {
   const intent = req.body.queryResult.intent.displayName;
