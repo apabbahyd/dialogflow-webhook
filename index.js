@@ -11,6 +11,14 @@ app.post("/", async (req, res) => {
   const parentId = req.body.queryResult.parameters.ParentID || "P001";
   let responseText = "No matching data found.";
 
+  if (!req.body.queryResult.parameters.ParentID) {
+  return res.json({
+    fulfillmentText: "Can you please tell me your Parent ID?"
+  });
+}
+
+
+  console.log("Received Parent ID:", parentId);
   const apiUrl = `${SUPABASE_URL}/rest/v1/student_data?parent_id=eq.${parentId}`;
   const headers = {
     apikey: supabaseKey,
