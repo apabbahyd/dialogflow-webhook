@@ -13,8 +13,8 @@ app.post("/", async (req, res) => {
 
   const apiUrl = `${SUPABASE_URL}/rest/v1/student_data?parent_id=eq.${parentId}`;
   const headers = {
-    apikey: API_KEY,
-    Authorization: `Bearer ${API_KEY}`,
+    apikey: supabaseKey,
+    Authorization: `Bearer ${supabaseKey}`,
   };
 
   try {
